@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void main()
+{
+	long double num1, num2;
+	long double T = 1;
+
+	scanf("%d", &T);
+	scanf("%d", &num1);
+	scanf("%d", &num2);
+
+	printf("%d\n" ,num1);
+	printf("-%d\n", num2);
+
+	long double result = num1-num2;
+
+	printf("=%d", result);
+}

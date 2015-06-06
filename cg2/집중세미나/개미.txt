@@ -1,0 +1,110 @@
+//Ants
+
+#include <iostream>
+#include <list>
+
+int L;
+
+class Ant
+{
+public:
+	Ant()
+	{
+		isFallen = false;
+		totalTime = 0;
+		direction = 1;
+	};
+
+	int totalTime;
+	int position;
+	int direction;
+	bool isFallen;
+
+	void Move(Ant* ant)
+	{
+		if(this->position == 0 || this->position == L)
+		{
+			isFallen = true;
+			return;
+		}
+
+		else if(ant->position == this->position)
+		{
+			position+=(-direction);
+			ant->direction != ant->direction;
+			totalTime+=1;
+		}
+
+		else
+		{
+			position+=direction;
+			totalTime+=1;
+		}
+
+	}
+};
+
+
+int main()
+{
+	int T;
+	int *n;
+	int *remainAnt;
+	//Ant **ants;
+
+
+	scanf("%d", &T);
+	n = new int[T];
+	remainAnt = new int[T];
+
+	for(int i=0; i<T; i++)
+	{
+		scanf("%d %d", &L, &n);
+		int remainAnt = n[T];
+		int *position = new int[n[T]];
+
+
+		for(int j=0; j<n[T]; j++)
+		{
+			scanf("%d", &position[j]);
+			ants[j].position = position[j];
+		}
+	
+	
+	
+	}
+
+	
+	for(int i=0; i<T; i++)
+	{
+
+
+
+	}
+
+
+	
+	int lastAntIndex = 0;
+
+	while(remainAnt > 0)
+	{
+		printf("%d\n", remainAnt);
+		for(int i=0; i<n[T]; i++)
+		{
+			if(ants[i].isFallen==true)
+				{
+					remainAnt--;
+					continue;
+				}
+
+			for(int j=0; j<n; j++)
+				{
+					ants[i].Move(&ants[j]);
+					lastAntIndex = i;
+				}
+		}
+	}
+
+	printf("총 소요 시간은 %d초입니다.", ants[lastAntIndex].totalTime);
+	return 0;
+}
